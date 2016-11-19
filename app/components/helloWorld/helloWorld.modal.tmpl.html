@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit Values</h4>
+</div>
+
+<div class="modal-body">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="btn-toolbar">
+                <button ng-repeat="val in values" class="btn" ng-class="{'btn-default': selectedValues.indexOf(val) == -1, 'btn-primary': selectedValues.indexOf(val) != -1}" ng-click="toggleValue(val)">{{val}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary"
+            data-ng-click="ok()">
+        Save
+    </button>
+</div>
